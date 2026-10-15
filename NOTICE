@@ -1,0 +1,15 @@
+ESP32-S3 XMC 0x187020 Bootloader Fix
+
+Copyright 2026 Project contributors
+
+This repository includes a modified ESP-IDF v5.5.5 bootloader binary and a
+source patch. ESP-IDF original source code is Copyright (c) 2015-2026
+Espressif Systems (Shanghai) CO LTD and is licensed under the Apache License,
+Version 2.0. ESP-IDF also incorporates third-party software under other
+licenses; see THIRD_PARTY_NOTICES.md and the licenses directory.
+
+Modification notice: the file
+components/bootloader_support/bootloader_flash/src/bootloader_flash.c was
+changed to accept XMC MFID 0x70 in the capacity range already handled for
+MFID 0x41. The source patch and modified binary are community artifacts and
+are not endorsed by Espressif Systems.

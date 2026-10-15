@@ -1,0 +1,14 @@
+diff --git a/components/bootloader_support/bootloader_flash/src/bootloader_flash.c b/components/bootloader_support/bootloader_flash/src/bootloader_flash.c
+index b21b9d4f..db8e321c 100644
+--- a/components/bootloader_support/bootloader_flash/src/bootloader_flash.c
++++ b/components/bootloader_support/bootloader_flash/src/bootloader_flash.c
+@@ -931,7 +931,8 @@ static IRAM_ATTR bool is_xmc_chip_strict(uint32_t rdid)
+         if (cpid >= 0x13 && cpid <= 0x20) {
+             matched = true;
+         }
+-    } else if (mfid == 0x41) {
++    // Community modification: support XMC MFID 0x70 (JEDEC 20 70 18).
++    } else if (mfid == 0x41 || mfid == 0x70) {
+         if (cpid >= 0x17 && cpid <= 0x20) {
+             matched = true;
+         }

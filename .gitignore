@@ -1,0 +1,23 @@
+# Generated builds
+build/
+sdkconfig
+sdkconfig.old
+dependencies.lock
+managed_components/
+
+# Arduino generated output
+*.elf
+*.map
+*.merged.bin
+
+# Local tools, downloads, backups and serial logs
+tools/
+downloads/
+backup/
+*.log
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
